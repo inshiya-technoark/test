@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Footer from './Pages/Footer';
 import SellerDashboard from './Pages/SellerDashboard/MyAccount';
 import Profile from './Pages/SellerDashboard/Profile';
@@ -13,7 +13,7 @@ import Quotes from './Pages/Quotes';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <SellerDashboard />
      { <Switch>
          <Route path='/' exact component={SellerDashboard} />
@@ -29,7 +29,7 @@ function App() {
       {
          <Footer />
       }
-    </Router>
+    </BrowserRouter>
   );
 }
 
