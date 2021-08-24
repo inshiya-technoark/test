@@ -9,11 +9,11 @@ import Profile from './Pages/SellerDashboard/Profile';
 function App() {
   return (
     <Router>
-    <SellerDashboard />
+    
       {
         <Switch>
          <Route path='/' exact component={SellerDashboard} />
-         <Route path='/sellerhub' exact component={SellerDashboard} />
+         <Route path='/sellerhub' component={SellerDashboard} />
          <Route path='/profile' component={Profile} />
          </Switch>
       }
