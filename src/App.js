@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       
-      <Switch>
+      {<Switch>
          <Route path='/' exact component={SellerDashboard} />
          <Route path='/sellerhub' exact component={SellerDashboard} />
          <Route path='/profile' component={Profile} />
@@ -25,6 +25,7 @@ function App() {
          <Route path='/order' component={Orders} />
          <Route path='/quotes' component={Quotes} />
        </Switch> 
+      }
     
       
          <Footer />
