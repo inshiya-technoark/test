@@ -9,6 +9,7 @@ import Profile from './Pages/SellerDashboard/Profile';
 function App() {
   return (
     <Router>
+    <SellerDashboard />
       {
         <Switch>
          <Route path='/' exact component={SellerDashboard} />
