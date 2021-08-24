@@ -14,17 +14,17 @@ import Quotes from './Pages/Quotes';
 function App() {
   return (
     <BrowserRouter>
-      
-     { <Switch>
-         <Route path='/' exact component={SellerDashboard} />
-         <Route path='/sellerhub' exact component={SellerDashboard} />
-         <Route path='/profile' component={Profile} />
-         <Route path='/payments' component={Payments} />
-         <Route path='/overview' component={Overview} />
-         <Route path='/messages' component={Messages} />
-         <Route path='/order' component={Orders} />
-         <Route path='/quotes' component={Quotes} />
-       </Switch> 
+      <SellerDashboard />
+     {// <Switch>
+        // <Route path='/' exact component={SellerDashboard} />
+         //<Route path='/sellerhub' exact component={SellerDashboard} />
+         //<Route path='/profile' component={Profile} />
+         //<Route path='/payments' component={Payments} />
+         //<Route path='/overview' component={Overview} />
+         //<Route path='/messages' component={Messages} />
+         //<Route path='/order' component={Orders} />
+         //<Route path='/quotes' component={Quotes} />
+       //</Switch> 
     }
       {
          <Footer />
