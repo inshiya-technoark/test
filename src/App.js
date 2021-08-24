@@ -14,7 +14,7 @@ import Quotes from './Pages/Quotes';
 function App() {
   return (
     <Router>
-      
+      <SellerDashboard />
      { <Switch>
          <Route path='/' exact component={SellerDashboard} />
          <Route path='/sellerhub' exact component={SellerDashboard} />
