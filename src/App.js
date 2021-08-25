@@ -13,11 +13,11 @@ import Quotes from './Pages/Quotes';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/test">
       
      { <Switch>
-         <Route path='/test/' exact component={SellerDashboard} />
-         <Route path='/sellerhub' exact component={SellerDashboard} />
+         <Route path='/' exact component={SellerDashboard} />
+         <Route path='/sellerhub' component={SellerDashboard} />
          <Route path='/profile' component={Profile} />
          <Route path='/payments' component={Payments} />
          <Route path='/overview' component={Overview} />
