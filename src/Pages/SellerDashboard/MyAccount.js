@@ -21,7 +21,7 @@ function SellerDashboard() {
                     <div className="left-sidebar equalColumn">
             <div className="box-content">
               <div className="logo">
-                <img src="assets/images/logo-full.png" alt="" className="img-fluid" />
+                <img src="/assets/images/logo-full.png" alt="" className="img-fluid" />
               </div>
               {/* end logo */}
               <nav className="sidebar card">
