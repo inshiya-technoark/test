@@ -1409,9 +1409,10 @@ input {
 
 .sidebar {
   overflow-y: scroll;
-  height: 37em;
+  height: 36em;
   border: none;
   margin-top: 1.5em;
+  padding-bottom: 3rem;
 }
 
 .sidebar li {
@@ -1419,12 +1420,6 @@ input {
 }
 
 .sidebar li a {
-  color: #333;
-  font-size: 0.9em;
-  font-weight: 500;
-}
-
-.nav-item has-submenu li a {
   color: #333;
   font-size: 0.9em;
   font-weight: 500;
