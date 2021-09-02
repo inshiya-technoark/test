@@ -1,6 +1,52 @@
-import React from 'react'
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import styled from "styled-components";
+
+
+const DropDownListContainer = styled("div")``;
+
+const DropDownList = styled("ul")`
+  padding: 0;
+  margin: 0;
+  padding-left: 1em;
+  background: #ffffff;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.8rem;
+  &:first-child {
+    padding-top: 0.8em;
+  }
+`;
+
+const ListItem = styled("li")`
+  list-style: none;
+  margin-bottom: 0.8em;
+  padding-top: 1em;
+  font-weight: 500;
+  font-size: 1rem;
+`;
+
+const options = [<Link to='/order'> Active Orders</Link> ,<Link to='/completedorder'>Completed Orders</Link>, <Link to='/returns'>Returns</Link>, <Link to='/canceled'>Canceled</Link>];
+
+const optionz = [<Link to='/quotes'>New Request</Link> ,<Link to='/quotes'>In Progress</Link>, <Link to='/quotes'>Archive Request</Link>];
+
 function Overview() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const toggling = () => {setIsOpen(!isOpen);setIsOn(false)}
+
+  const [isOn, setIsOn] = useState(false);
+  const toggling1 = () => {setIsOn(!isOn); setIsOpen(false)};
+  
+  const onOptionClicked = value => () => {
+    console.log(selectedOption);
+  };
+
+  const onOptionzClicked = value => () => {
+    console.log(selectedOption);
+  };
+
     return (
         <div>
             <div>
@@ -36,21 +82,34 @@ function Overview() {
                     <a className="nav-link" href="messages.html"><Link to='/messages'> Messages</Link>  </a>
                   </li>
                   <li className="nav-item has-submenu">
-                    <a className="nav-link" href="orders.html"> <Link to='/order'> Orders</Link>  <i className="fas fa-chevron-down" /></a>
-                    <ul className="submenu collapse">
-                      <li><a className="nav-link" href="orders.html">Active Orders</a></li>
-                      <li><a className="nav-link" href="orders.html">Completed Orders</a></li>
-                      <li><a className="nav-link" href="#">Returns</a> </li>
-                      <li><a className="nav-link" href="#">Canceled</a> </li>
-                    </ul>
+                    <a onClick={toggling} className="nav-link"><Link to='/order'> Orders</Link>  <i className="fas fa-chevron-down" /></a>
+                    
+                      {isOpen && (
+          <DropDownListContainer>
+            <DropDownList>
+              {options.map(option => (
+                <ListItem onClick={onOptionClicked(option)} key={Math.random()}>
+                  {option}
+                </ListItem>
+              ))}
+            </DropDownList>
+          </DropDownListContainer>
+        )}
                   </li>
                   <li className="nav-item has-submenu">
-                    <a className="nav-link" href="quotes.html"> Quotes <i className="fas fa-chevron-down" /></a>
-                    <ul className="submenu collapse">
-                      <li><a className="nav-link" href="quotes.html">New Request</a></li>
-                      <li><a className="nav-link" href="quotes.html">In Progress</a></li>
-                      <li><a className="nav-link" href="quotes.html">Archive Request </a></li>                  
-                    </ul>
+                    <a onClick={toggling1} className="nav-link"><Link to='/quotes'> Quotes</Link>  <i className="fas fa-chevron-down" /></a>
+                    
+                      {isOn && (
+          <DropDownListContainer>
+            <DropDownList>
+              {optionz.map(option => (
+                <ListItem onClick={onOptionzClicked(optionz)}>
+                  {option}
+                </ListItem>
+              ))}
+            </DropDownList>
+          </DropDownListContainer>
+        )}
                   </li>
                 </ul>
               </nav>
