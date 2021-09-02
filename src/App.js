@@ -8,7 +8,7 @@ import Profile from './Pages/SellerDashboard/Profile';
 import Payments from './Pages/Payments';
 import Overview from './Pages/Overview';
 import Messages from './Pages/Messages';
-import Orders from './Pages/Orders';
+import Orders from './Pages/Orders/ActiveOrders';
 import CompletedOrders from './Pages/Orders/CompletedOrders';
 import Returns from './Pages/Orders/Returns';
 import Canceled from './Pages/Orders/Canceled';
