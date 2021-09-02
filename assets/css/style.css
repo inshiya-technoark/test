@@ -1408,9 +1408,9 @@ input {
 }
 
 .sidebar {
+  height: 36em;
   border: none;
   margin-top: 1.5em;
-  margin-bottom: 16em;
 }
 
 .sidebar li {
