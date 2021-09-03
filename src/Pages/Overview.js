@@ -27,9 +27,23 @@ const ListItem = styled("li")`
   font-size: 1rem;
 `;
 
-const options = [<Link to='/order'> Active Orders</Link> ,<Link to='/completedorder'>Completed Orders</Link>, <Link to='/returns'>Returns</Link>, <Link to='/canceled'>Canceled</Link>];
+const options = [<li className="nav-item">
+                    <a className="nav-link"><Link to='/order'> Active Orders</Link>  </a>
+                  </li>,<li className="nav-item">
+                    <a className="nav-link"><Link to='/completedorder'>Completed Orders</Link>  </a>
+                  </li>,<li className="nav-item">
+                    <a className="nav-link"><Link to='/returns'>Returns</Link>  </a>
+                  </li>,<li className="nav-item">
+                    <a className="nav-link"><Link to='/canceled'>Canceled</Link>  </a>
+                  </li>]
 
-const optionz = [<Link to='/quotes'>New Request</Link> ,<Link to='/quotes'>In Progress</Link>, <Link to='/quotes'>Archive Request</Link>];
+const optionz = [<li className="nav-item">
+                    <a className="nav-link"><Link to='/quotes'>New Request</Link>  </a>
+                  </li>,<li className="nav-item">
+                    <a className="nav-link"><Link to='/quotes'>In Progress</Link>  </a>
+                  </li>,<li className="nav-item">
+                    <a className="nav-link"><Link to='/quotes'>Archive Request</Link>  </a>
+                  </li>];
 
 function Overview() {
   const [isOpen, setIsOpen] = useState(false);

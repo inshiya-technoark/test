@@ -25,11 +25,24 @@ const ListItem = styled("li")`
   font-weight: 500;
   font-size: 1rem;
 `;
-const optionz = [<Link to='/quotes'>New Request</Link> ,<Link to='/quotes'>In Progress</Link>, <Link to='/quotes'>Archive Request</Link>];
 
-const options = [<Link to='/order'> Active Orders</Link> ,<Link to='/completedorder'>Completed Orders</Link>, <li className="nav-item nav-active">
-                    <a className="nav-link ">  <Link to='/returns'>  Returns</Link></a>
-                  </li>, <Link to='/canceled'>Canceled</Link>];
+const options = [<li className="nav-item">
+                    <a className="nav-link"><Link to='/order'> Active Orders</Link>  </a>
+                  </li>,<li className="nav-item">
+                    <a className="nav-link"><Link to='/completedorder'>Completed Orders</Link>  </a>
+                  </li>,<li className="nav-item nav-active">
+                    <a className="nav-link"><Link to='/returns'>Returns</Link>  </a>
+                  </li>,<li className="nav-item">
+                    <a className="nav-link"><Link to='/canceled'>Canceled</Link>  </a>
+                  </li>]
+
+const optionz = [<li className="nav-item">
+                    <a className="nav-link"><Link to='/quotes'>New Request</Link>  </a>
+                  </li>,<li className="nav-item">
+                    <a className="nav-link"><Link to='/quotes'>In Progress</Link>  </a>
+                  </li>,<li className="nav-item">
+                    <a className="nav-link"><Link to='/quotes'>Archive Request</Link>  </a>
+                  </li>];
 function Returns() {
   const [isOpen, setIsOpen] = useState(true);
   const [selectedOption, setSelectedOption] = useState(null);
