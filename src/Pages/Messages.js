@@ -82,10 +82,10 @@ function Messages() {
               <nav className="sidebar card">
                 <ul className="nav flex-column" id="nav_accordion">
                   <li className="nav-item nav-active">
-                    <a className="nav-link" href="/overview"> <Link to='/overview'> Overview</Link></a>
+                    <a className="nav-link" href="test/overview"> <Link to='/overview'> Overview</Link></a>
                   </li>
                   <li className="nav-item has-submenu">
-                    <a href="/products" onClick={toggling1} className="nav-link"><Link to='/products'> Products</Link>  <i className="fas fa-chevron-down" /></a>
+                    <a href="test/products" onClick={toggling1} className="nav-link"><Link to='/products'> Products</Link>  <i className="fas fa-chevron-down" /></a>
                     
                       {isOn && (
                       <DropDownListContainer>
@@ -100,7 +100,7 @@ function Messages() {
                       )}
                   </li>
                   <li className="nav-item has-submenu">
-                    <a href="/order" onClick={toggling} className="nav-link"><Link to='/order'> Orders</Link>  <i className="fas fa-chevron-down" /></a>
+                    <a href="test/order" onClick={toggling} className="nav-link"><Link to='/order'> Orders</Link>  <i className="fas fa-chevron-down" /></a>
                     
                       {isOpen && (
                       <DropDownListContainer className="abs">
@@ -115,13 +115,13 @@ function Messages() {
                       )}
                   </li>
                   <li className="nav-item active">
-                    <a className="nav-link" href="/messages"><Link to='/messages'> Messages</Link>  </a>
+                    <a className="nav-link" href="test/messages"><Link to='/messages'> Messages</Link>  </a>
                   </li>
                   <li className="nav-item ">
-                    <a className="nav-link " href="/payments"> <Link to='/payments'> Payments</Link></a>
+                    <a className="nav-link " href="test/payments"> <Link to='/payments'> Payments</Link></a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/sellerhub"><Link to='/sellerhub'>My Account</Link></a>
+                    <a className="nav-link" href="test/sellerhub"><Link to='/sellerhub'>My Account</Link></a>
                   </li>
                 </ul>
               </nav>
