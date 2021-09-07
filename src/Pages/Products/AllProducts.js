@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
-
 const DropDownListContainer = styled("div")``;
 
 const DropDownList = styled("ul")`
@@ -28,29 +27,29 @@ const ListItem = styled("li")`
 `;
 
 const options = [<li className="nav-item">
-                    <a className="nav-link"><Link to='/order'> In Progress</Link>  </a>
+                    <a href="/order" className="nav-link"><Link to='/order'> In Progress</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/completedorder'>Completed</Link>  </a>
+                    <a href="/completedorder" className="nav-link"><Link to='/completedorder'>Completed</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/shipped'>Shipped</Link>  </a>
+                    <a href="/shipped" className="nav-link"><Link to='/shipped'>Shipped</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/canceled'>Canceled</Link>  </a>
+                    <a href="/canceled" className="nav-link"><Link to='/canceled'>Canceled</Link>  </a>
                   </li>]
 
 const optionz = [<li className="nav-item">
-                    <a className="nav-link"><Link to='/products'>Recent Products</Link>  </a>
-                  </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/allproducts'>All Products</Link>  </a>
-                  </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/addproduct'>Add A Product</Link>  </a>
+                    <a href="/products" className="nav-link"><Link to='/products'>Recent Products</Link>  </a>
+                  </li>,<li id="active" className="nav-item">
+                    <a href="/allproducts" className="nav-link"><Link to='/allproducts'>All Products</Link>  </a>
+                  </li>,<li  className="nav-item">
+                    <a href="/addproduct" className="nav-link"><Link to='/addproduct'>Add A Product</Link>  </a>
                   </li>];
 
-function Overview() {
+function Products() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const toggling = () => {setIsOpen(!isOpen);setIsOn(false)}
 
-  const [isOn, setIsOn] = useState(false);
+  const [isOn, setIsOn] = useState(true);
   const toggling1 = () => {setIsOn(!isOn); setIsOpen(false)};
   
   const onOptionClicked = value => () => {
@@ -60,7 +59,6 @@ function Overview() {
   const onOptionzClicked = value => () => {
     console.log(selectedOption);
   };
-
     return (
         <div>
             <div>
@@ -83,11 +81,11 @@ function Overview() {
               {/* end logo */}
               <nav className="sidebar card">
                 <ul className="nav flex-column" id="nav_accordion">
-                  <li className="nav-item  nav-active">
+                  <li className="nav-item nav-active">
                     <a className="nav-link" href="/overview"> <Link to='/overview'> Overview</Link></a>
                   </li>
-                  <li className="nav-item has-submenu">
-                    <a href="/products" onClick={toggling1} className="nav-link"><Link to='/products'> Products</Link>  <i className="fas fa-chevron-down" /></a>
+                  <li className="nav-item has-submenu active">
+                    <a onClick={toggling1} className="nav-link"><Link to='/products'> Products</Link>  <i className="fas fa-chevron-down" /></a>
                     
                       {isOn && (
                       <DropDownListContainer>
@@ -155,7 +153,8 @@ function Overview() {
                 <div className="col-md-12">           
                   <nav>
                     <div className="nav nav-tabs" id="nav-tab" role="tablist">
-                      <a className="nav-item active" id="nav-activeOrders-tab" data-toggle="tab" href="#nav-activeOrders" role="tab" aria-controls="nav-activeOrders" aria-selected="true">Overview</a>
+                      <a className="nav-item " id="nav-account-tab" data-toggle="tab" href="#nav-account" role="tab" aria-controls="nav-account" aria-selected="false"><Link to='/products'>Recent Products</Link></a>
+                      <a className="nav-item active  " id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="true"><Link to='/allproducts'>All Products</Link></a>
                     </div>
                   </nav>
                   <div className="tab-content" id="nav-tabContent">
@@ -177,5 +176,5 @@ function Overview() {
     )
 }
 
-export default Overview
+export default Products
 

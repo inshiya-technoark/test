@@ -9,41 +9,41 @@ const DropDownListContainer = styled("div")``;
 const DropDownList = styled("ul")`
   padding: 0;
   margin: 0;
-  padding-left: 1em;
+  padding-left: 0.5em;
   background: #ffffff;
   box-sizing: border-box;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 800;
   font-size: 0.8rem;
   &:first-child {
-    padding-top: 0.8em;
+    padding-top: 0.5em;
   }
 `;
 
 const ListItem = styled("li")`
   list-style: none;
-  margin-bottom: 0.8em;
-  padding-top: 1em;
-  font-weight: 500;
+  margin-bottom: 0.4em;
+  padding-top: 0rem;
+  font-weight: 800;
   font-size: 1rem;
 `;
 
 const options = [<li className="nav-item">
-                    <a className="nav-link"><Link to='/order'> Active Orders</Link>  </a>
+                    <a className="nav-link"><Link to='/order'> In Progress</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/completedorder'>Completed Orders</Link>  </a>
+                    <a className="nav-link"><Link to='/completedorder'>Completed</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/returns'>Returns</Link>  </a>
+                    <a className="nav-link"><Link to='/shipped'>Shipped</Link>  </a>
                   </li>,<li className="nav-item">
                     <a className="nav-link"><Link to='/canceled'>Canceled</Link>  </a>
                   </li>]
 
 const optionz = [<li className="nav-item">
-                    <a className="nav-link"><Link to='/quotes'>New Request</Link>  </a>
+                    <a className="nav-link"><Link to='/quotes'>Recent Products</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/quotes'>In Progress</Link>  </a>
+                    <a className="nav-link"><Link to='/allproducts'>All Products</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/quotes'>Archive Request</Link>  </a>
+                    <a className="nav-link"><Link to='/addproduct'>Add A Product</Link>  </a>
                   </li>];
 
 function SellerDashboard() {
@@ -77,7 +77,7 @@ function SellerDashboard() {
         
         <title>The Xchange Marketplace</title>
         <div id="dashboard" className="col-2-layout">
-                    <div className="left-sidebar equalColumn">
+          <div className="left-sidebar equalColumn">
             <div className="box-content">
               <div className="logo">
                 <img src="assets/images/logo-full.png" alt="" className="img-fluid" />
@@ -86,47 +86,53 @@ function SellerDashboard() {
               <nav className="sidebar card">
                 <ul className="nav flex-column" id="nav_accordion">
                   <li className="nav-item nav-active">
-                    <a className="nav-link" href="seller-dashboard-myAccount.html"><Link to='/sellerhub'>My Account</Link></a>
-                  </li>
-                  <li className="nav-item ">
-                    <a className="nav-link " href="payments.html"> <Link to='/payments'> Payments</Link></a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="overview.html"> <Link to='/overview'> Overview</Link></a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="messages.html"><Link to='/messages'> Messages</Link>  </a>
+                    <a className="nav-link" href="/overview"> <Link to='/overview'> Overview</Link></a>
                   </li>
                   <li className="nav-item has-submenu">
-                    <a onClick={toggling} className="nav-link"><Link to='/order'> Orders</Link>  <i className="fas fa-chevron-down" /></a>
-                    
-                      {isOpen && (
-          <DropDownListContainer>
-            <DropDownList>
-              {options.map(option => (
-                <ListItem onClick={onOptionClicked(option)} key={Math.random()}>
-                  {option}
-                </ListItem>
-              ))}
-            </DropDownList>
-          </DropDownListContainer>
-        )}
-                  </li>
-                  <li className="nav-item has-submenu">
-                    <a onClick={toggling1} className="nav-link"><Link to='/quotes'> Quotes</Link>  <i className="fas fa-chevron-down" /></a>
+                    <a href="/products" onClick={toggling1} className="nav-link"><Link to='/products'> Products</Link>  <i className="fas fa-chevron-down" /></a>
                     
                       {isOn && (
-          <DropDownListContainer>
-            <DropDownList>
-              {optionz.map(option => (
-                <ListItem onClick={onOptionzClicked(optionz)}>
-                  {option}
-                </ListItem>
-              ))}
-            </DropDownList>
-          </DropDownListContainer>
-        )}
+                      <DropDownListContainer>
+                        <DropDownList>
+                          {optionz.map(option => (
+                            <ListItem onClick={onOptionzClicked(optionz)}>
+                              {option}
+                            </ListItem>
+                          ))}
+                        </DropDownList>
+                      </DropDownListContainer>
+                      )}
                   </li>
+                  <li className="nav-item has-submenu">
+                    <a href="/order" onClick={toggling} className="nav-link"><Link to='/order'> Orders</Link>  <i className="fas fa-chevron-down" /></a>
+                    
+                      {isOpen && (
+                      <DropDownListContainer className="abs">
+                        <DropDownList >
+                          {options.map(option => (
+                            <ListItem onClick={onOptionClicked(option)} key={Math.random()}>
+                              {option}
+                            </ListItem>
+                          ))}
+                        </DropDownList>
+                      </DropDownListContainer>
+                      )}
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/messages"><Link to='/messages'> Messages</Link>  </a>
+                  </li>
+                  <li className="nav-item ">
+                    <a className="nav-link " href="/payments"> <Link to='/payments'> Payments</Link></a>
+                  </li>
+                  <li className="nav-item active">
+                    <a className="nav-link" href="/sellerhub"><Link to='/sellerhub'>My Account</Link></a>
+                  </li>
+                  
+                  
+                  
+                  
+                  
+                  
                 </ul>
               </nav>
               <div className="logout-btn">
@@ -160,11 +166,19 @@ function SellerDashboard() {
                   <nav>
                     <div className="nav nav-tabs" id="nav-tab" role="tablist">
                       <a className="nav-item active " id="nav-account-tab" data-toggle="tab" href="#nav-account" role="tab" aria-controls="nav-account" aria-selected="true"><Link to='/sellerhub'>MY ACCOUNT</Link></a>
-                      <a className="nav-item " id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><Link to='/profile'>PROFILE</Link></a>
+                      <a className="nav-item " id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><Link to='/profile'>SUBSCRIPTION</Link></a>
                     </div>
                   </nav>
                   <div className="tab-content" id="nav-tabContent">
                     <div className="tab-pane fade  show active" id="nav-account" role="tabpanel" aria-labelledby="nav-account-tab"> 
+                      <div className="form-sec full-block mb-4">
+                        <h3>Upload a public profile picture <small>(optional) </small></h3>
+                        <div className="row">
+                          <div className="col-md-8">
+                            <a href="#."><img src="assets/images/upload-img.png" alt="" width={100} /></a>
+                          </div>
+                        </div>
+                      </div>
                       <div className="form-sec full-block mb-4">
                         <h3>Personal info</h3>
                         <div className="row mt-2">
@@ -178,16 +192,21 @@ function SellerDashboard() {
                         {/* end row */}
                         <div className="row mt-3">
                           <div className="col-md-4">
-                            <input type="input" name="username" placeholder="Username" className="form-control" />
+                            <input type="input" name="email" placeholder="Email" className="form-control" />
                           </div>
                           <div className="col-md-4">
                             <input type="password" name="password" placeholder="Password" className="form-control" />
                           </div>
+                          <div className="col-md-4">
+                            <a>Change password</a>
+                          </div>
                         </div>
+                        
                         {/* end row */}
-                        <div className="row">
-                          <div className="col-md-8 text-right">
-                            <a href="#">Change password</a>
+                        
+                        <div className="row mt-3">
+                          <div className="col-md-8">
+                            <input type="input" name="company name" placeholder="Company Name" className="form-control" />
                           </div>
                         </div>
                         {/* end row */}
@@ -213,11 +232,7 @@ function SellerDashboard() {
                             <input type="input" name="address" placeholder="Your main contact address" className="form-control" />
                           </div>
                         </div>
-                        <div className="row mt-3">
-                          <div className="col-md-8">
-                            <input type="input" name="address" placeholder="Ship from address" className="form-control" />
-                          </div>
-                        </div>
+                        
                         {/* end row */}
                       </div>
                       {/* end full-block */}

@@ -7,43 +7,42 @@ const DropDownListContainer = styled("div")``;
 const DropDownList = styled("ul")`
   padding: 0;
   margin: 0;
-  padding-left: 1em;
+  padding-left: 0.5em;
   background: #ffffff;
   box-sizing: border-box;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 800;
   font-size: 0.8rem;
   &:first-child {
-    padding-top: 0.8em;
+    padding-top: 0.5em;
   }
 `;
 
 const ListItem = styled("li")`
   list-style: none;
-  margin-bottom: 0.8em;
-  padding-top: 1em;
-  font-weight: 500;
+  margin-bottom: 0.4em;
+  padding-top: 0rem;
+  font-weight: 800;
   font-size: 1rem;
 `;
-
 const options = [<li className="nav-item">
-                    <a className="nav-link"><Link to='/order'> Active Orders</Link>  </a>
+                    <a href="/order" className="nav-link"><Link to='/order'> In Progress</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/completedorder'>Completed Orders</Link>  </a>
-                  </li>,<li className="nav-item nav-active">
-                    <a className="nav-link"><Link to='/returns'>Returns</Link>  </a>
+                    <a href="/completedorder" className="nav-link"><Link to='/completedorder'>Completed</Link>  </a>
+                  </li>,<li id="active" className="nav-item">
+                    <a href="/shipped" className="nav-link"><Link to='/shipped'>Shipped</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/canceled'>Canceled</Link>  </a>
+                    <a href="/canceled" className="nav-link"><Link to='/canceled'>Canceled</Link>  </a>
                   </li>]
 
 const optionz = [<li className="nav-item">
-                    <a className="nav-link"><Link to='/quotes'>New Request</Link>  </a>
+                    <a href="/products" className="nav-link"><Link to='/products'>Recent Products</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/quotes'>In Progress</Link>  </a>
+                    <a href="/allproducts" className="nav-link"><Link to='/allproducts'>All Products</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a className="nav-link"><Link to='/quotes'>Archive Request</Link>  </a>
+                    <a href="/addproduct" className="nav-link"><Link to='/addproduct'>Add A Product</Link>  </a>
                   </li>];
-function Returns() {
+function Shipped() {
   const [isOpen, setIsOpen] = useState(true);
   const [selectedOption, setSelectedOption] = useState(null);
   const toggling = () => {setIsOpen(!isOpen);setIsOn(false)}
@@ -80,46 +79,47 @@ function Returns() {
               {/* end logo */}
               <nav className="sidebar card">
                 <ul className="nav flex-column" id="nav_accordion">
-                  <li className="nav-item ">
-                    <a className="nav-link" href="seller-dashboard-myAccount.html"> <Link to='/sellerhub'> My Account </Link> </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="payments.html"> <Link to='/payments'>  Payments</Link></a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="overview.html"> <Link to='/overview'> Overview </Link></a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="messages.html"> <Link to='/messages'> Messages </Link> </a>
+                  <li className="nav-item  nav-active">
+                    <a className="nav-link" href="/overview"> <Link to='/overview'> Overview</Link></a>
                   </li>
                   <li className="nav-item has-submenu">
-                    <a  onClick={toggling} className="nav-link"><Link to='/order'> Orders</Link> <i className="fas fa-chevron-down"/></a>
-                    {isOpen && (
-          <DropDownListContainer>
-            <DropDownList>
-              {options.map(option => (
-                <ListItem onClick={onOptionClicked(option)}>
-                  {option}
-                </ListItem>
-              ))}
-            </DropDownList>
-          </DropDownListContainer>
-        )}
-                  </li>
-                  <li className="nav-item has-submenu">
-                    <a onClick={toggling1} className="nav-link"><Link to='/quotes'> Quotes</Link>  <i className="fas fa-chevron-down" /></a>
+                    <a href="/products" onClick={toggling1} className="nav-link"><Link to='/products'> Products</Link>  <i className="fas fa-chevron-down" /></a>
                     
                       {isOn && (
-          <DropDownListContainer>
-            <DropDownList>
-              {optionz.map(option => (
-                <ListItem onClick={onOptionzClicked(optionz)}>
-                  {option}
-                </ListItem>
-              ))}
-            </DropDownList>
-          </DropDownListContainer>
-        )}
+                      <DropDownListContainer>
+                        <DropDownList>
+                          {optionz.map(option => (
+                            <ListItem onClick={onOptionzClicked(optionz)}>
+                              {option}
+                            </ListItem>
+                          ))}
+                        </DropDownList>
+                      </DropDownListContainer>
+                      )}
+                  </li>
+                  <li className="nav-item has-submenu active">
+                    <a onClick={toggling} className="nav-link"><Link to='/order'> Orders</Link>  <i className="fas fa-chevron-down" /></a>
+                    
+                      {isOpen && (
+                      <DropDownListContainer className="abs">
+                        <DropDownList >
+                          {options.map(option => (
+                            <ListItem onClick={onOptionClicked(option)} key={Math.random()}>
+                              {option}
+                            </ListItem>
+                          ))}
+                        </DropDownList>
+                      </DropDownListContainer>
+                      )}
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/messages"><Link to='/messages'> Messages</Link>  </a>
+                  </li>
+                  <li className="nav-item ">
+                    <a className="nav-link " href="/payments"> <Link to='/payments'> Payments</Link></a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/sellerhub"><Link to='/sellerhub'>My Account</Link></a>
                   </li>
                 </ul>
               </nav>
@@ -151,7 +151,7 @@ function Returns() {
                 <div className="col-md-12">           
                   <nav>
                     <div className="nav nav-tabs" id="nav-tab" role="tablist">
-                      <a className="nav-item active" id="nav-activeOrders-tab" data-toggle="tab" href="#nav-activeOrders" role="tab" aria-controls="nav-activeOrders" aria-selected="true">Returns</a>
+                      <a className="nav-item active" id="nav-activeOrders-tab" data-toggle="tab" href="#nav-activeOrders" role="tab" aria-controls="nav-activeOrders" aria-selected="true">Shipped</a>
                       <div className="order-right-filter">
                         <div className="search-blk">
                           <input type="text" placeholder="Search all orders" className="form-control" />
@@ -831,5 +831,5 @@ function Returns() {
     )
 }
 
-export default Returns
+export default Shipped
 
