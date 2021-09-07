@@ -26,21 +26,21 @@ const ListItem = styled("li")`
   font-size: 1rem;
 `;
 const options = [<li id="active" className="nav-item">
-                    <a href="test/order" className="nav-link"><Link to='/order'> In Progress</Link>  </a>
+                    <a href="/order" className="nav-link"><Link to='/order'> In Progress</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a href="test/completedorder" className="nav-link"><Link to='/completedorder'>Completed</Link>  </a>
+                    <a href="/completedorder" className="nav-link"><Link to='/completedorder'>Completed</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a href="test/shipped" className="nav-link"><Link to='/shipped'>Shipped</Link>  </a>
+                    <a href="/shipped" className="nav-link"><Link to='/shipped'>Shipped</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a href="test/canceled" className="nav-link"><Link to='/canceled'>Canceled</Link>  </a>
+                    <a href="/canceled" className="nav-link"><Link to='/canceled'>Canceled</Link>  </a>
                   </li>]
 
 const optionz = [<li className="nav-item">
-                    <a href="test/products" className="nav-link"><Link to='/products'>Recent Products</Link>  </a>
+                    <a href="/products" className="nav-link"><Link to='/products'>Recent Products</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a href="test/allproducts" className="nav-link"><Link to='/allproducts'>All Products</Link>  </a>
+                    <a href="/allproducts" className="nav-link"><Link to='/allproducts'>All Products</Link>  </a>
                   </li>,<li className="nav-item">
-                    <a href="test/addproduct" className="nav-link"><Link to='/addproduct'>Add A Product</Link>  </a>
+                    <a href="/addproduct" className="nav-link"><Link to='/addproduct'>Add A Product</Link>  </a>
                   </li>];
 
 function Order() {
@@ -81,10 +81,10 @@ function Order() {
               <nav className="sidebar card">
                 <ul className="nav flex-column" id="nav_accordion">
                   <li className="nav-item nav-active">
-                    <a className="nav-link" href="test/overview"> <Link to='/overview'> Overview</Link></a>
+                    <a className="nav-link" href="/overview"> <Link to='/overview'> Overview</Link></a>
                   </li>
                   <li className="nav-item has-submenu">
-                    <a href="test/products" onClick={toggling1} className="nav-link"><Link to='/products'> Products</Link>  <i className="fas fa-chevron-down" /></a>
+                    <a href="/products" onClick={toggling1} className="nav-link"><Link to='/products'> Products</Link>  <i className="fas fa-chevron-down" /></a>
                     
                       {isOn && (
                       <DropDownListContainer>
@@ -114,13 +114,13 @@ function Order() {
                       )}
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="test/messages"><Link to='/messages'> Messages</Link>  </a>
+                    <a className="nav-link" href="/messages"><Link to='/messages'> Messages</Link>  </a>
                   </li>
                   <li className="nav-item ">
-                    <a className="nav-link " href="test/payments"> <Link to='/payments'> Payments</Link></a>
+                    <a className="nav-link " href="/payments"> <Link to='/payments'> Payments</Link></a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="test/sellerhub"><Link to='/sellerhub'>My Account</Link></a>
+                    <a className="nav-link" href="/sellerhub"><Link to='/sellerhub'>My Account</Link></a>
                   </li>
                 </ul>
               </nav>
