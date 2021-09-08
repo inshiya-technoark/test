@@ -2495,3 +2495,145 @@ input {
   height: 36px;
   border: none;
 }
+
+.payments-content .th-col,
+.payments-content .td-col {
+  font-size: 0.8em;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-weight: 500;
+}
+.payments-content .th-col {
+  color: #48a068;
+  font-size: 0.9em;
+  font-weight: 600;
+  line-height: 35px;
+}
+.payments-content .td-col {
+  height: 100%;
+  vertical-align: middle;
+}
+
+.paymentsCon-thead {
+  width: 100%;
+  float: left;
+  margin-bottom: 15px;
+}
+
+.paymentsCon-item-row {
+  width: 100%;
+  float: left;
+  box-shadow: 0 0 3px #ccc;
+  margin-bottom: 15px;
+  padding: 12px 0;
+  border-radius: 8px;
+}
+
+.payments-content .tg-pro {
+  width: 40%;
+  float: left;
+  padding-right: 20px;
+}
+
+.tg-pro .tg-pro-img {
+  float: left;
+  width: 60px;
+  margin-right: 15px;
+  margin-left: 15px;
+  box-shadow: 0 0 3px #ccc;
+  padding: 4px;
+  border-radius: 6px;
+}
+.tg-pro .tg-pro-img .img-responsive {
+  max-width: 100%;
+}
+
+.payments-content .tg-orderNo {
+  width: 12%;
+  float: left;
+}
+
+.payments-content .tg-date {
+  width: 11%;
+  float: left;
+}
+
+.payments-content .tg-amount {
+  width: 12%;
+  float: left;
+}
+
+.payments-content .tg-pay-status {
+  width: 10%;
+  float: left;
+}
+
+.tg-pay-status select {
+  background: #fff;
+  color: #000;
+  padding: 4px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.tg-pay-status select option[value="unpaid"] {
+  background: rgba(100, 100, 100, 0.3);
+}
+
+.tg-pay-status select option[value="paid"] {
+  background: rgba(150, 150, 150, 0.3);
+}
+.payments-content .tg-pay-methos {
+  width: 15%;
+  float: left;
+}
+
+.tg-pay-status .tdpaid {
+  background: green;
+}
+
+.tg-pay-status .tdunpaid {
+  background: #ff0000;
+}
+
+#dashboard .form-control.style2 {
+  border-radius: 7px;
+  background: #f6f6f6;
+  border: solid 1px #f2f2f2;
+}
+
+#dashboard .order-status select.form-control {
+  padding: 0.4rem 0.85rem;
+}
+#dashboard .order-status .statusShipped.form-control,
+#dashboard .order-status .statusinprogress.form-control {
+  color: #2d7e4b;
+}
+#dashboard .order-status .statusCanceled.form-control {
+  color: #ff0000;
+}
+
+#dashboard button.btn-save {
+  padding: 5px 20px;
+  font-size: 0.75em;
+  margin-right: 15px;
+  margin-top: 4rem !important;
+  border-radius: 5px;
+}
+
+.order-status label {
+  font-size: 0.85em;
+}
+
+#statusShipped .order-status label {
+  margin-bottom: 0;
+}
+
+#statusShipped .order-status input.form-control {
+  padding: 0.2rem 0.85rem;
+}
+@media (min-width: 992px) {
+  .modal-order-details {
+    max-width: 600px;
+  }
+}

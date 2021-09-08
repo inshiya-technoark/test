@@ -152,16 +152,110 @@ function Payments() {
             {/* end box-content */}
             <div className="box-content minColheight">
               <div className="row" id="dashboard-tabs">
-                <div className="col-md-12">                     
+                <div className="col-md-12">						
                   <nav>
-                    <div className="nav nav-tabs" id="nav-tab" role="tablist">
-                      <a className="nav-item active" id="nav-activeOrders-tab" data-toggle="tab" href="#nav-activeOrders" role="tab" aria-controls="nav-activeOrders" aria-selected="true">Payments</a>
+                    <div className="nav nav-tabs">
+                      <a className="nav-item active">Payments</a>
+                      <div className="order-right-filter">
+                        <div className="search-blk">
+                          <input type="text" placeholder="Search all orders" className="form-control" />
+                          <input type="submit" defaultValue="Search" className="btn-search" />
+                        </div>
+                        <div className="filter-order">
+                          | &nbsp; &nbsp; <a href="#"> Filter &gt; </a>
+                        </div>
+                      </div>
                     </div>
                   </nav>
-                  <div className="tab-content" id="nav-tabContent">
-                    <div className="tab-pane fade show active" id="nav-activeOrders" role="tabpanel" aria-labelledby="nav-activeOrders-tab">
-                      <h1 className="text-center pt-3">Under Construction</h1>
+                  <div className="payments-content">
+                    <div className="paymentsCon-thead">
+                      <div className="th-col tg-pro">Product</div>
+                      <div className="th-col tg-orderNo">Order No.</div>
+                      <div className="th-col tg-date">Date</div>
+                      <div className="th-col tg-amount">Amount</div>
+                      <div className="th-col tg-pay-status">Status</div>
+                      <div className="th-col tg-pay-methos">Payment Method</div>
                     </div>
+                    <div className="paymentsCon-item-row">
+                      <div className="td-col tg-pro">
+                        <div className="tg-pro-img">
+                          <img src="assets/images/pro-img.jpg" alt="" className="img-responsive" />
+                        </div>
+                        Beckman Coulter Life Science UV/Vis Spectrophoto-meter DU 730
+                      </div>
+                      <div className="td-col tg-orderNo">#5896254</div>
+                      <div className="td-col tg-date">20/08/2021</div>
+                      <div className="td-col tg-amount">$19,990</div>
+                      <div className="td-col tg-pay-status">
+                        <select>
+                          <option val>Select</option>
+                          <option val="unpaid">Unpaid</option>
+                          <option val="paid">Paid</option>
+                        </select>
+                      </div>
+                      <div className="td-col tg-pay-methos">Credit Card</div>
+                    </div>
+                    {/* end paymentsCon-item-row */}
+                    <div className="paymentsCon-item-row">
+                      <div className="td-col tg-pro">
+                        <div className="tg-pro-img">
+                          <img src="assets/images/pro-img.jpg" alt="" className="img-responsive" />
+                        </div>
+                        Beckman Coulter Life Science UV/Vis Spectrophoto-meter DU 730
+                      </div>
+                      <div className="td-col tg-orderNo">#5896254</div>
+                      <div className="td-col tg-date">20/08/2021</div>
+                      <div className="td-col tg-amount">$19,990</div>
+                      <div className="td-col tg-pay-status">
+                        <select>
+                          <option val>Select</option>
+                          <option className="tdunpaid" val="unpaid">Unpaid</option>
+                          <option className="tdpaid" val="paid" selected>Paid</option>
+                        </select>
+                      </div>
+                      <div className="td-col tg-pay-methos">Credit Card</div>
+                    </div>
+                    {/* end paymentsCon-item-row */}
+                    <div className="paymentsCon-item-row">
+                      <div className="td-col tg-pro">
+                        <div className="tg-pro-img">
+                          <img src="assets/images/pro-img.jpg" alt="" className="img-responsive" />
+                        </div>
+                        Beckman Coulter Life Science UV/Vis Spectrophoto-meter DU 730
+                      </div>
+                      <div className="td-col tg-orderNo">#5896254</div>
+                      <div className="td-col tg-date">20/08/2021</div>
+                      <div className="td-col tg-amount">$19,990</div>
+                      <div className="td-col tg-pay-status">
+                        <select>
+                          <option val>Select</option>
+                          <option val="unpaid" selected>Unpaid</option>
+                          <option val="paid">Paid</option>
+                        </select>
+                      </div>
+                      <div className="td-col tg-pay-methos">Credit Card</div>
+                    </div>
+                    {/* end paymentsCon-item-row */}
+                    <div className="paymentsCon-item-row">
+                      <div className="td-col tg-pro">
+                        <div className="tg-pro-img">
+                          <img src="assets/images/pro-img.jpg" alt="" className="img-responsive" />
+                        </div>
+                        Beckman Coulter Life Science UV/Vis Spectrophoto-meter DU 730
+                      </div>
+                      <div className="td-col tg-orderNo">#5896254</div>
+                      <div className="td-col tg-date">20/08/2021</div>
+                      <div className="td-col tg-amount">$19,990</div>
+                      <div className="td-col tg-pay-status">
+                        <select>
+                          <option val>Select</option>
+                          <option val="unpaid">Unpaid</option>
+                          <option val="paid" selected>Paid</option>
+                        </select>
+                      </div>
+                      <div className="td-col tg-pay-methos">Credit Card</div>
+                    </div>
+                    {/* end paymentsCon-item-row */}
                   </div>
                 </div>
               </div>

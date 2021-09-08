@@ -148,9 +148,9 @@ function Shipped() {
             {/* end box-content */}
             <div className="box-content minColheight">
               <div className="row" id="dashboard-tabs">
-                <div className="col-md-12">           
+                 <div className="col-md-12" id="statusShipped">						
                   <nav>
-                    <div className="nav nav-tabs" id="nav-tab" role="tablist">
+                    <div className="nav nav-tabs " id="nav-tab" role="tablist">
                       <a className="nav-item active" id="nav-activeOrders-tab" data-toggle="tab" href="#nav-activeOrders" role="tab" aria-controls="nav-activeOrders" aria-selected="true">Shipped</a>
                       <div className="order-right-filter">
                         <div className="search-blk">
@@ -167,378 +167,215 @@ function Shipped() {
                     <div className="tab-pane fade show active" id="nav-activeOrders" role="tabpanel" aria-labelledby="nav-activeOrders-tab">
                       <div className="form-sec" id="order-details-sec">
                         <div className="row order-details">
-                          <div className="col-md-8 ">
+                          <div className="col-md-6">
                             <h3>Chris Wattson</h3>
                             <p className="order-number">Order Number: <strong>#5896254</strong></p>
                             <p>Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730</p>
                             <button type="button" className="view-more pt-3" data-toggle="modal" data-target="#viewOrderDetail">
                               View Details
                             </button>
-                            {/* Modal */}
-                            <div className="modal fade" id="viewOrderDetail" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div className="modal-dialog  modal-md" role="document">
-                                <div className="modal-content">
-                                  <div className="modal-body">
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">×</span>
-                                    </button>
-                                    <div className="order-details brdr-none">
-                                      <h2>ORDER DETAILS</h2>
-                                      <div className="od-list">
-                                        <label>Order Date:</label> July 19, 2021
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Number:</label> #5896254
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Total:</label> $5,900
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PRODUCT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Product</strong> <br />
-                                        Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730
-                                      </div>
-                                      <div className="od-list mt-2 mb-2">
-                                        <img src="assets/images/img-02.jpg" alt="" />
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Catagory:</label> Test &amp; Measurement
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Brand:</label> Rigaku
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Seller:</label> SeqGen
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>SHIPPING DETAILS</h2>
-                                      <div className="od-list">
-                                        Chris Wattson
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Shipping Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PAYMENT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Payment DETAILS</strong> <br />
-                                        Visa ending in 0986
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Billing Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                  </div>
-                                </div>
+                          </div>
+                          <div className="col-md-6">
+                            <div className="row">
+                              <div className="col-md-4 order-status">
+                                <label>Change Status</label>
+                                <select className="form-control style2 statusShipped">
+                                  <option>Shipped</option>
+                                </select>
+                                <label>Tracking Number</label>
+                                <input type="text" className="form-control style2" />
+                              </div>
+                              <div className="col-md-5 order-status">
+                                <label>&nbsp;</label>
+                                <textarea className="form-control style2" placeholder="Comments" rows={3} defaultValue={""} />
+                              </div>
+                              <div className="col-md-3 text-right">
+                                <label>&nbsp;</label>
+                                <button className="btn btn-style1 btn-green btn-save">
+                                  Save
+                                </button>
                               </div>
                             </div>
                           </div>
                         </div>
                         {/* end row */}
                         <div className="row order-details">
-                          <div className="col-md-8 ">
+                          <div className="col-md-6">
                             <h3>Chris Wattson</h3>
                             <p className="order-number">Order Number: <strong>#5896254</strong></p>
                             <p>Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730</p>
                             <button type="button" className="view-more pt-3" data-toggle="modal" data-target="#viewOrderDetail">
                               View Details
                             </button>
-                            {/* Modal */}
-                            <div className="modal fade" id="viewOrderDetail" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div className="modal-dialog  modal-md" role="document">
-                                <div className="modal-content">
-                                  <div className="modal-body">
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">×</span>
-                                    </button>
-                                    <div className="order-details brdr-none">
-                                      <h2>ORDER DETAILS</h2>
-                                      <div className="od-list">
-                                        <label>Order Date:</label> July 19, 2021
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Number:</label> #5896254
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Total:</label> $5,900
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PRODUCT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Product</strong> <br />
-                                        Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730
-                                      </div>
-                                      <div className="od-list mt-2 mb-2">
-                                        <img src="assets/images/img-02.jpg" alt="" />
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Catagory:</label> Test &amp; Measurement
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Brand:</label> Rigaku
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Seller:</label> SeqGen
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>SHIPPING DETAILS</h2>
-                                      <div className="od-list">
-                                        Chris Wattson
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Shipping Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PAYMENT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Payment DETAILS</strong> <br />
-                                        Visa ending in 0986
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Billing Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                  </div>
-                                </div>
+                          </div>
+                          <div className="col-md-6">
+                            <div className="row">
+                              <div className="col-md-4 order-status">
+                                <label>Change Status</label>
+                                <select className="form-control style2 statusShipped">
+                                  <option>Shipped</option>
+                                </select>
+                                <label>Tracking Number</label>
+                                <input type="text" className="form-control style2" />
+                              </div>
+                              <div className="col-md-5 order-status">
+                                <label>&nbsp;</label>
+                                <textarea className="form-control style2" placeholder="Comments" rows={3} defaultValue={""} />
+                              </div>
+                              <div className="col-md-3 text-right">
+                                <label>&nbsp;</label>
+                                <button className="btn btn-style1 btn-green btn-save">
+                                  Save
+                                </button>
                               </div>
                             </div>
                           </div>
                         </div>
                         {/* end row */}
                         <div className="row order-details">
-                          <div className="col-md-8 ">
+                          <div className="col-md-6">
                             <h3>Chris Wattson</h3>
                             <p className="order-number">Order Number: <strong>#5896254</strong></p>
                             <p>Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730</p>
                             <button type="button" className="view-more pt-3" data-toggle="modal" data-target="#viewOrderDetail">
                               View Details
                             </button>
-                            {/* Modal */}
-                            <div className="modal fade" id="viewOrderDetail" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div className="modal-dialog  modal-md" role="document">
-                                <div className="modal-content">
-                                  <div className="modal-body">
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">×</span>
-                                    </button>
-                                    <div className="order-details brdr-none">
-                                      <h2>ORDER DETAILS</h2>
-                                      <div className="od-list">
-                                        <label>Order Date:</label> July 19, 2021
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Number:</label> #5896254
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Total:</label> $5,900
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PRODUCT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Product</strong> <br />
-                                        Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730
-                                      </div>
-                                      <div className="od-list mt-2 mb-2">
-                                        <img src="assets/images/img-02.jpg" alt="" />
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Catagory:</label> Test &amp; Measurement
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Brand:</label> Rigaku
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Seller:</label> SeqGen
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>SHIPPING DETAILS</h2>
-                                      <div className="od-list">
-                                        Chris Wattson
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Shipping Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PAYMENT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Payment DETAILS</strong> <br />
-                                        Visa ending in 0986
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Billing Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                  </div>
-                                </div>
+                          </div>
+                          <div className="col-md-6">
+                            <div className="row">
+                              <div className="col-md-4 order-status">
+                                <label>Change Status</label>
+                                <select className="form-control style2 statusShipped">
+                                  <option>Shipped</option>
+                                </select>
+                                <label>Tracking Number</label>
+                                <input type="text" className="form-control style2" />
+                              </div>
+                              <div className="col-md-5 order-status">
+                                <label>&nbsp;</label>
+                                <textarea className="form-control style2" placeholder="Comments" rows={3} defaultValue={""} />
+                              </div>
+                              <div className="col-md-3 text-right">
+                                <label>&nbsp;</label>
+                                <button className="btn btn-style1 btn-green btn-save">
+                                  Save
+                                </button>
                               </div>
                             </div>
                           </div>
                         </div>
                         {/* end row */}
                         <div className="row order-details">
-                          <div className="col-md-8 ">
+                          <div className="col-md-6">
                             <h3>Chris Wattson</h3>
                             <p className="order-number">Order Number: <strong>#5896254</strong></p>
                             <p>Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730</p>
                             <button type="button" className="view-more pt-3" data-toggle="modal" data-target="#viewOrderDetail">
                               View Details
                             </button>
-                            {/* Modal */}
-                            <div className="modal fade" id="viewOrderDetail" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div className="modal-dialog  modal-md" role="document">
-                                <div className="modal-content">
-                                  <div className="modal-body">
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">×</span>
-                                    </button>
-                                    <div className="order-details brdr-none">
-                                      <h2>ORDER DETAILS</h2>
-                                      <div className="od-list">
-                                        <label>Order Date:</label> July 19, 2021
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Number:</label> #5896254
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Total:</label> $5,900
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PRODUCT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Product</strong> <br />
-                                        Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730
-                                      </div>
-                                      <div className="od-list mt-2 mb-2">
-                                        <img src="assets/images/img-02.jpg" alt="" />
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Catagory:</label> Test &amp; Measurement
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Brand:</label> Rigaku
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Seller:</label> SeqGen
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>SHIPPING DETAILS</h2>
-                                      <div className="od-list">
-                                        Chris Wattson
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Shipping Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PAYMENT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Payment DETAILS</strong> <br />
-                                        Visa ending in 0986
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Billing Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                  </div>
-                                </div>
+                          </div>
+                          <div className="col-md-6">
+                            <div className="row">
+                              <div className="col-md-4 order-status">
+                                <label>Change Status</label>
+                                <select className="form-control style2 statusShipped">
+                                  <option>Shipped</option>
+                                </select>
+                                <label>Tracking Number</label>
+                                <input type="text" className="form-control style2" />
+                              </div>
+                              <div className="col-md-5 order-status">
+                                <label>&nbsp;</label>
+                                <textarea className="form-control style2" placeholder="Comments" rows={3} defaultValue={""} />
+                              </div>
+                              <div className="col-md-3 text-right">
+                                <label>&nbsp;</label>
+                                <button className="btn btn-style1 btn-green btn-save">
+                                  Save
+                                </button>
                               </div>
                             </div>
                           </div>
                         </div>
                         {/* end row */}
                         <div className="row order-details">
-                          <div className="col-md-8 ">
+                          <div className="col-md-6">
                             <h3>Chris Wattson</h3>
                             <p className="order-number">Order Number: <strong>#5896254</strong></p>
                             <p>Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730</p>
                             <button type="button" className="view-more pt-3" data-toggle="modal" data-target="#viewOrderDetail">
                               View Details
                             </button>
-                            {/* Modal */}
-                            <div className="modal fade" id="viewOrderDetail" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div className="modal-dialog  modal-md" role="document">
-                                <div className="modal-content">
-                                  <div className="modal-body">
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">×</span>
-                                    </button>
-                                    <div className="order-details brdr-none">
-                                      <h2>ORDER DETAILS</h2>
-                                      <div className="od-list">
-                                        <label>Order Date:</label> July 19, 2021
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Number:</label> #5896254
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Total:</label> $5,900
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PRODUCT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Product</strong> <br />
-                                        Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730
-                                      </div>
-                                      <div className="od-list mt-2 mb-2">
-                                        <img src="assets/images/img-02.jpg" alt="" />
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Catagory:</label> Test &amp; Measurement
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Brand:</label> Rigaku
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Seller:</label> SeqGen
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
+                          </div>
+                          <div className="col-md-6">
+                            <div className="row">
+                              <div className="col-md-4 order-status">
+                                <label>Change Status</label>
+                                <select className="form-control style2 statusShipped">
+                                  <option>Shipped</option>
+                                </select>
+                                <label>Tracking Number</label>
+                                <input type="text" className="form-control style2" />
+                              </div>
+                              <div className="col-md-5 order-status">
+                                <label>&nbsp;</label>
+                                <textarea className="form-control style2" placeholder="Comments" rows={3} defaultValue={""} />
+                              </div>
+                              <div className="col-md-3 text-right">
+                                <label>&nbsp;</label>
+                                <button className="btn btn-style1 btn-green btn-save">
+                                  Save
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        {/* end row */}
+                        {/* Modal */}
+                        <div className="modal fade" id="viewOrderDetail" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div className="modal-dialog  modal-order-details" role="document">
+                            <div className="modal-content">
+                              <div className="modal-body">
+                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">×</span>
+                                </button>
+                                <div className="order-details brdr-none">
+                                  <h2>ORDER DETAILS</h2>
+                                  <div className="od-list">
+                                    <label>Order Date:</label> July 19, 2021
+                                  </div>
+                                  <div className="od-list">
+                                    <label>Order Number:</label> #5896254
+                                  </div>
+                                  <div className="od-list">
+                                    <label>Order Total:</label> $5,900
+                                  </div>
+                                </div>
+                                {/* end  order-details */}
+                                <div className="order-details brdr-none">
+                                  <h2>PRODUCT DETAILS</h2>
+                                  <div className="od-list">
+                                    <strong>Product</strong> <br />
+                                  </div>
+                                  <div className="od-list mt-2 mb-2">
+                                    <img src="assets/images/img-02.jpg" alt="" />
+                                  </div>
+                                  <div className="od-list mb-2">
+                                    Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730
+                                  </div>
+                                  <div className="od-list">
+                                    <label>Catagory:</label> Test &amp; Measurement
+                                  </div>
+                                  <div className="od-list">
+                                    <label>Brand:</label> Rigaku
+                                  </div>
+                                  <div className="od-list">
+                                    <label>Seller:</label> SeqGen
+                                  </div>
+                                </div>
+                                {/* end  order-details */}
+                                <div className="row">
+                                  <div className="col-md-6">
                                     <div className="order-details brdr-none">
                                       <h2>SHIPPING DETAILS</h2>
                                       <div className="od-list">
@@ -551,269 +388,29 @@ function Shipped() {
                                       </div>
                                     </div>
                                     {/* end  order-details */}
+                                  </div>
+                                  <div className="col-md-6">
                                     <div className="order-details brdr-none">
-                                      <h2>PAYMENT DETAILS</h2>
+                                      <h2>PREFERRED SHIPPING METHOD</h2>
                                       <div className="od-list">
-                                        <strong>Payment DETAILS</strong> <br />
-                                        Visa ending in 0986
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Billing Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
+                                        Ground Shipping<br />
+                                        Seller Preferred Shipping
                                       </div>
                                     </div>
                                     {/* end  order-details */}
                                   </div>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        {/* end row */}
-                        <div className="row order-details">
-                          <div className="col-md-8 ">
-                            <h3>Chris Wattson</h3>
-                            <p className="order-number">Order Number: <strong>#5896254</strong></p>
-                            <p>Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730</p>
-                            <button type="button" className="view-more pt-3" data-toggle="modal" data-target="#viewOrderDetail">
-                              View Details
-                            </button>
-                            {/* Modal */}
-                            <div className="modal fade" id="viewOrderDetail" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div className="modal-dialog  modal-md" role="document">
-                                <div className="modal-content">
-                                  <div className="modal-body">
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">×</span>
-                                    </button>
-                                    <div className="order-details brdr-none">
-                                      <h2>ORDER DETAILS</h2>
-                                      <div className="od-list">
-                                        <label>Order Date:</label> July 19, 2021
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Number:</label> #5896254
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Total:</label> $5,900
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PRODUCT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Product</strong> <br />
-                                        Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730
-                                      </div>
-                                      <div className="od-list mt-2 mb-2">
-                                        <img src="assets/images/img-02.jpg" alt="" />
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Catagory:</label> Test &amp; Measurement
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Brand:</label> Rigaku
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Seller:</label> SeqGen
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>SHIPPING DETAILS</h2>
-                                      <div className="od-list">
-                                        Chris Wattson
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Shipping Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PAYMENT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Payment DETAILS</strong> <br />
-                                        Visa ending in 0986
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Billing Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
+                                <div className="order-details brdr-none">
+                                  <h2>PREFERRED PAYMENT METHOD</h2>
+                                  <div className="od-list">
+                                    Credit Card
                                   </div>
                                 </div>
+                                {/* end  order-details */}
                               </div>
                             </div>
                           </div>
-                        </div>
-                        {/* end row */}
-                        <div className="row order-details">
-                          <div className="col-md-8 ">
-                            <h3>Chris Wattson</h3>
-                            <p className="order-number">Order Number: <strong>#5896254</strong></p>
-                            <p>Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730</p>
-                            <button type="button" className="view-more pt-3" data-toggle="modal" data-target="#viewOrderDetail">
-                              View Details
-                            </button>
-                            {/* Modal */}
-                            <div className="modal fade" id="viewOrderDetail" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div className="modal-dialog  modal-md" role="document">
-                                <div className="modal-content">
-                                  <div className="modal-body">
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">×</span>
-                                    </button>
-                                    <div className="order-details brdr-none">
-                                      <h2>ORDER DETAILS</h2>
-                                      <div className="od-list">
-                                        <label>Order Date:</label> July 19, 2021
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Number:</label> #5896254
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Total:</label> $5,900
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PRODUCT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Product</strong> <br />
-                                        Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730
-                                      </div>
-                                      <div className="od-list mt-2 mb-2">
-                                        <img src="assets/images/img-02.jpg" alt="" />
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Catagory:</label> Test &amp; Measurement
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Brand:</label> Rigaku
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Seller:</label> SeqGen
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>SHIPPING DETAILS</h2>
-                                      <div className="od-list">
-                                        Chris Wattson
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Shipping Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PAYMENT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Payment DETAILS</strong> <br />
-                                        Visa ending in 0986
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Billing Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        {/* end row */}
-                        <div className="row order-details">
-                          <div className="col-md-8 ">
-                            <h3>Chris Wattson</h3>
-                            <p className="order-number">Order Number: <strong>#5896254</strong></p>
-                            <p>Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730</p>
-                            <button type="button" className="view-more pt-3" data-toggle="modal" data-target="#viewOrderDetail">
-                              View Details
-                            </button>
-                            {/* Modal */}
-                            <div className="modal fade" id="viewOrderDetail" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div className="modal-dialog  modal-md" role="document">
-                                <div className="modal-content">
-                                  <div className="modal-body">
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">×</span>
-                                    </button>
-                                    <div className="order-details brdr-none">
-                                      <h2>ORDER DETAILS</h2>
-                                      <div className="od-list">
-                                        <label>Order Date:</label> July 19, 2021
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Number:</label> #5896254
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Order Total:</label> $5,900
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PRODUCT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Product</strong> <br />
-                                        Beckman Coulter Life Science UV/Vis Spectrophotometer DU 730
-                                      </div>
-                                      <div className="od-list mt-2 mb-2">
-                                        <img src="assets/images/img-02.jpg" alt="" />
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Catagory:</label> Test &amp; Measurement
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Brand:</label> Rigaku
-                                      </div>
-                                      <div className="od-list">
-                                        <label>Seller:</label> SeqGen
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>SHIPPING DETAILS</h2>
-                                      <div className="od-list">
-                                        Chris Wattson
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Shipping Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                    <div className="order-details brdr-none">
-                                      <h2>PAYMENT DETAILS</h2>
-                                      <div className="od-list">
-                                        <strong>Payment DETAILS</strong> <br />
-                                        Visa ending in 0986
-                                      </div>
-                                      <div className="od-list mt-2">
-                                        <strong>Billing Address</strong> <br />
-                                        12345 Jones Rd. Suite #246 <br />
-                                        Houston, TX 77075
-                                      </div>
-                                    </div>
-                                    {/* end  order-details */}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        {/* end row */}
+                        </div>	
                       </div>
                     </div>
                   </div>
